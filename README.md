@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+🐾 Paw and Pearl - Tienda Veterinaria Online
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web desarrollada en React con Bootstrap para la gestión de productos, catálogo, servicios veterinarios, panel de administración y carrito de compras. El proyecto incluye un entorno automatizado de pruebas unitarias implementado con Karma y Jasmine.
 
-## Available Scripts
+📁 Estructura del Proyecto
 
-In the project directory, you can run:
+PawAndPearl-TiendaVeterinaria/
+┗ 📁 paw-and-pearl/
+  ┣ 📁 public/
+  ┃ ┣ 📁 assets/
+  ┃ ┃ ┣ 📁 css/
+  ┃ ┃ ┃ ┗ 📄 style.css
+  ┃ ┃ ┗ 📁 img/   
+  ┃ ┃    ┗ 📄 ...png                # Imágenes del sitio, blog y tienda
+  ┃ ┣ 📄 favicon.ico
+  ┃ ┣ 📄 index.html                 
+  ┃ ┣ 📄 logo192.png
+  ┃ ┣ 📄 logo512.png
+  ┃ ┣ 📄 manifest.json
+  ┃ ┗ 📄 robots.txt
+  ┣ 📁 src/
+  ┃ ┣ 📁 components/                # Estructura de componentes con Bootstrap
+  ┃ ┃ ┣ 📄 AdminSidebar.jsx
+  ┃ ┃ ┣ 📄 AppTestingSuite.spec.js  # Suite con las 10 pruebas unitarias
+  ┃ ┃ ┣ 📄 Footer.jsx
+  ┃ ┃ ┣ 📄 Header.jsx
+  ┃ ┃ ┗ 📄 ProductCard.jsx
+  ┃ ┣ 📁 data/
+  ┃ ┃ ┗ 📄 mockDatabase.js          # Base de datos simulada y persitencia en localStorage(almacenamiento local)
+  ┃ ┣ 📁 pages/                     # Páginas y vistas principales de la aplicación
+  ┃ ┃ ┣ 📁 admin/
+  ┃ ┃ ┃ ┗ 📄 AdminDashboard.jsx
+  ┃ ┃ ┣ 📄 About.jsx
+  ┃ ┃ ┣ 📄 Blog.jsx
+  ┃ ┃ ┣ 📄 BlogDetail.jsx
+  ┃ ┃ ┣ 📄 Cart.jsx
+  ┃ ┃ ┣ 📄 Categories.jsx
+  ┃ ┃ ┣ 📄 Checkout.jsx
+  ┃ ┃ ┣ 📄 Contact.jsx
+  ┃ ┃ ┣ 📄 Home.jsx
+  ┃ ┃ ┣ 📄 Login.jsx
+  ┃ ┃ ┣ 📄 MyRequests.jsx
+  ┃ ┃ ┣ 📄 Offers.jsx
+  ┃ ┃ ┣ 📄 OrderError.jsx
+  ┃ ┃ ┣ 📄 OrderSuccess.jsx
+  ┃ ┃ ┣ 📄 ProductDetail.jsx
+  ┃ ┃ ┣ 📄 Register.jsx
+  ┃ ┃ ┣ 📄 ServiceDetail.jsx
+  ┃ ┃ ┣ 📄 Services.jsx
+  ┃ ┃ ┗ 📄 Shop.jsx
+  ┃ ┣ 📄 App.css
+  ┃ ┣ 📄 App.js                    # Gestor principal de navegación de la app
+  ┃ ┣ 📄 App.test.js
+  ┃ ┣ 📄 index.css
+  ┃ ┣ 📄 index.js                  # Punto de entrada de React
+  ┃ ┣ 📄 logo.svg
+  ┃ ┣ 📄 reportWebVitals.js
+  ┃ ┗ 📄 setupTests.js
+  ┣ 📄 .gitignore
+  ┣ 📄 karma.conf.js               # Configuración del ejecutor de pruebas unitarias Karma
+  ┣ 📄 package.json                # Dependencias y scripts del proyecto
+  ┗ 📄 package-lock.json
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🛠️ Tecnologías y Herramientas Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+React & JSX: Biblioteca principal para la creación de la interfaz de usuario basada en componentes dinámicos y reutilizables. JSX combina la sintaxis similar a HTML con la potencia lógica de JavaScript.
 
-### `npm test`
+Bootstrap 5 & CSS3: Utilizados para garantizar un diseño responsivo, limpio y adaptable a pantallas de escritorios, tablets y dispositivos móviles.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Babel: Transpilador encargado de transformar el código JavaScript moderno (ES6+) y la sintaxis JSX a JavaScript compatible con cualquier navegador.
 
-### `npm run build`
+Webpack: Empaquetador de módulos que procesa componentes, recursos estáticos (assets) y dependencias en un paquete optimizado para ejecución.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Jasmine: Framework de pruebas (Testing Framework) que proporciona la sintaxis (describe, it, expect, spy) para estructurar las aserciones y casos de prueba.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Karma: Ejecutador de pruebas (Test Runner) que levanta un entorno en segundo plano (ChromeHeadless), procesa las especificaciones de Jasmine y entrega los resultados directamente en la terminal.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+⚙️ Desarrollo del Trabajo y Funcionamiento Técnico
 
-### `npm run eject`
+1. Arquitectura de Componentes y Vistas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+La aplicación sigue el principio de Responsabilidad Única. La lógica global y navegación se coordinan desde App.js, delegando la presentación a componentes modulares (Header, Footer, ProductCard) y vistas específicas dentro de src/pages/ (Tienda, Carrito, Blog, Detalle de Productos, Panel Administrativo, etc.).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Lógica CRUD y Persistencia
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+El archivo src/data/mockDatabase.js centraliza la gestión de datos simulando un backend persistente apoyado en localStorage:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create: Registro de nuevos productos desde el panel de administración y adición de ítems al carrito.
 
-## Learn More
+Read: Consulta e iteración del catálogo de productos, promociones, entradas de blog y servicios.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Update: Modificación de cantidades de productos en el carrito y actualización de inventario.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Delete: Eliminación de productos por ID y vaciado completo de la orden de compra.
 
-### Code Splitting
+3. Validaciones del DOM y Pruebas Unitarias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+En src/components/AppTestingSuite.spec.js se implementaron 10 pruebas unitarias aisladas bajo la metodología AAA (Arrange, Act, Assert):
 
-### Analyzing the Bundle Size
+Renderizado en el DOM: Confirmación de que nombres, badges y precios formateados a pesos chilenos se pinten correctamente en la interfaz.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Simulación de Eventos: Disparo de eventos click para validar callbacks de carrito y navegación.
 
-### Making a Progressive Web App
+Lógica del Negocio: Verificación de cálculos de subtotales, vaciado del carrito y manipulación del inventario simulado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🚀 Comandos Disponibles
 
-### Advanced Configuration
+En la terminal, dentro de la carpeta paw-and-pearl, puedes ejecutar:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+npm start
 
-### Deployment
+Ejecuta la aplicación en modo de desarrollo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Abre http://localhost:3000 para verla en el navegador.
 
-### `npm run build` fails to minify
+npm test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Inicia el ejecutor de pruebas Karma con Jasmine y ejecuta la suite completa de 10 pruebas unitarias:
+
+Chrome Headless: Executed 10 of 10 SUCCESS
+TOTAL: 10 SUCCESS
+
+
+npm run build
+
+Compila y optimiza la aplicación para producción dentro de la carpeta build.

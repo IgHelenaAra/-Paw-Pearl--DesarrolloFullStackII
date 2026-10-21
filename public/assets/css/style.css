@@ -1,0 +1,149 @@
+/* ==========================================================================
+   Paw&Pearl - Estilos Globales y Tema Customizado
+   ========================================================================== */
+
+:root {
+  --color-navy: #1B2A4A;
+  --color-navy-dark: #0F182E;
+  --color-teal: #14B8A6;
+  --color-teal-light: #5EEAD4;
+  --color-coral: #FF6B6B;
+  --color-bg-light: #F8FAFC;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg-light);
+  color: #334155;
+}
+
+/* --- COLORES PERSONALIZADOS --- */
+.bg-navy {
+  background-color: var(--color-navy) !important;
+}
+
+.text-navy {
+  color: var(--color-navy) !important;
+}
+
+.text-teal {
+  color: var(--color-teal) !important;
+}
+
+.text-teal-light {
+  color: var(--color-teal-light) !important;
+}
+
+.text-light-muted {
+  color: #94A3B8 !important;
+}
+
+.btn-teal {
+  background-color: var(--color-teal);
+  border-color: var(--color-teal);
+  color: white;
+}
+
+.btn-teal:hover {
+  background-color: #0D9488;
+  border-color: #0D9488;
+  color: white;
+}
+
+.border-teal {
+  border-color: var(--color-teal) !important;
+}
+
+.btn-coral {
+  background-color: var(--color-coral);
+  border-color: var(--color-coral);
+  color: white;
+}
+
+.btn-coral:hover {
+  background-color: #EE5253;
+  border-color: #EE5253;
+  color: white;
+}
+
+/* --- NAVEGACIÓN Y HEADER --- */
+.nav-link-custom {
+  color: var(--color-navy);
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active-link {
+  color: var(--color-teal);
+  transform: translateY(-1px);
+}
+
+.btn-cart-counter {
+  background-color: #F1F5F9;
+  color: var(--color-navy);
+  font-weight: 600;
+  border: 1px solid #E2E8F0;
+}
+
+.btn-cart-counter:hover {
+  background-color: #E2E8F0;
+}
+
+.btn-admin-panel {
+  background-color: var(--color-navy);
+  border: none;
+}
+
+.btn-admin-panel:hover {
+  background-color: var(--color-navy-dark);
+}
+
+/* --- TARJETAS DE PRODUCTO --- */
+.product-card-container {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #ffffff;
+}
+
+.product-card-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08) !important;
+}
+
+.btn-detail-action {
+  background-color: var(--color-navy);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-detail-action:hover {
+  background-color: var(--color-navy-dark);
+  color: #ffffff;
+}
+
+.btn-add-cart-action {
+  transition: all 0.2s ease;
+}
+
+.btn-add-cart-action:hover {
+  background-color: var(--color-teal);
+  color: white !important;
+}
+
+/* --- SIDEBAR ADMINISTRATIVO --- */
+.admin-sidebar button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* --- FOOTER LINKS --- */
+footer .btn-link {
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+footer .btn-link:hover {
+  color: var(--color-teal-light) !important;
+}
