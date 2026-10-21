@@ -10,24 +10,24 @@ PawAndPearl-TiendaVeterinaria/
   ┃ ┣ 📁 assets/
   ┃ ┃ ┣ 📁 css/
   ┃ ┃ ┃ ┗ 📄 style.css
-  ┃ ┃ ┗ 📁 img/   
-  ┃ ┃    ┗ 📄 ...png                # Imágenes del sitio, blog y tienda
+  ┃ ┃ ┗ 📁 img/    
+  ┃ ┃    ┗ 📄 ...png                       # Imágenes del sitio, blog y tienda
   ┃ ┣ 📄 favicon.ico
-  ┃ ┣ 📄 index.html                 
+  ┃ ┣ 📄 index.html                     
   ┃ ┣ 📄 logo192.png
   ┃ ┣ 📄 logo512.png
   ┃ ┣ 📄 manifest.json
   ┃ ┗ 📄 robots.txt
   ┣ 📁 src/
-  ┃ ┣ 📁 components/                # Estructura de componentes con Bootstrap
+  ┃ ┣ 📁 components/                    # Estructura de componentes con Bootstrap
   ┃ ┃ ┣ 📄 AdminSidebar.jsx
-  ┃ ┃ ┣ 📄 AppTestingSuite.spec.js  # Suite con las 10 pruebas unitarias
+  ┃ ┃ ┣ 📄 AppTestingSuite.spec.js      # Suite con las 10 pruebas unitarias
   ┃ ┃ ┣ 📄 Footer.jsx
   ┃ ┃ ┣ 📄 Header.jsx
   ┃ ┃ ┗ 📄 ProductCard.jsx
   ┃ ┣ 📁 data/
-  ┃ ┃ ┗ 📄 mockDatabase.js          # Base de datos simulada y persitencia en localStorage(almacenamiento local)
-  ┃ ┣ 📁 pages/                     # Páginas y vistas principales de la aplicación
+  ┃ ┃ ┗ 📄 mockDatabase.js              # Base de datos simulada y persistencia en localStorage
+  ┃ ┣ 📁 pages/                         # Páginas y vistas principales de la aplicación
   ┃ ┃ ┣ 📁 admin/
   ┃ ┃ ┃ ┗ 📄 AdminDashboard.jsx
   ┃ ┃ ┣ 📄 About.jsx
@@ -49,16 +49,16 @@ PawAndPearl-TiendaVeterinaria/
   ┃ ┃ ┣ 📄 Services.jsx
   ┃ ┃ ┗ 📄 Shop.jsx
   ┃ ┣ 📄 App.css
-  ┃ ┣ 📄 App.js                    # Gestor principal de navegación de la app
+  ┃ ┣ 📄 App.js                         # Componente principal de enrutamiento/estado
   ┃ ┣ 📄 App.test.js
   ┃ ┣ 📄 index.css
-  ┃ ┣ 📄 index.js                  # Punto de entrada de React
+  ┃ ┣ 📄 index.js                       # Punto de entrada de React
   ┃ ┣ 📄 logo.svg
   ┃ ┣ 📄 reportWebVitals.js
   ┃ ┗ 📄 setupTests.js
   ┣ 📄 .gitignore
-  ┣ 📄 karma.conf.js               # Configuración del ejecutor de pruebas unitarias Karma
-  ┣ 📄 package.json                # Dependencias y scripts del proyecto
+  ┣ 📄 karma.conf.js                    # Configuración del ejecutor de pruebas unitarias Karma
+  ┣ 📄 package.json                     # Dependencias y scripts del proyecto
   ┗ 📄 package-lock.json
 
 
